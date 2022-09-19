@@ -16,7 +16,7 @@ function new_form () {
                     <input type='url' id="pic" name="pic" />
                 </div>
                 <div>
-                    <label htmlFor="city">City</label>
+                    <label htmlFor="city"> City     </label>
                     <input id="city" name="city" />
                 </div>
                 <div>
