@@ -1,38 +1,35 @@
 const React = require('react')
 const Def = require('./default')
 
-function new_form () {
+function edit_form (data) {
     return (
         <Def>
           <main>
-            <h1>Add a New Place</h1>
-            <form method="POST" action="/places">
-                <div>
+          <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
+            <div className="row">
+                <div className="form-group col-sm-6">
                     <label htmlFor="name">Place Name</label>
-                    <input id="name" name="name"  required/>
+                    <input id="name" name="name" value={data.place.name}/>
                 </div>
-                <div>
+                <div className="form-group col-sm-6">
                     <label htmlFor="pic">Place Picture</label>
-                    <input type='url' id="pic" name="pic" />
+                    <input id="pic" name="pic" value={data.place.pic} />
                 </div>
+
                 <div>
                     <label htmlFor="city"> City     </label>
-                    <input id="city" name="city" />
+                    <input id="city" name="city" value={data.place.city}/>
                 </div>
                 <div>
                     <label htmlFor="state">State</label>
-                    <input id="state" name="state" />
+                    <input id="state" name="state" value={data.place.state} />
                 </div>
                 <div>
                     <label htmlFor="cuisines">Cuisines</label>
                     <input id="cuisines" name="cuisines"  required/>
                 </div>
-                <div>
-                    <label for="founded">Founded Year</label>
-                    <input  id="founded" name="founded" />
-                </div>
-
-                <input type="submit" value="Add Place" />
+            </div>
+                <input type="submit" value="Add Place" action=''/>
                 </form>
 
           </main>
@@ -40,7 +37,8 @@ function new_form () {
     )
 }
 
-module.exports = new_form
+module.exports = edit_form
+
 
 
 

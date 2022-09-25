@@ -27,11 +27,6 @@ function new_form () {
                     <label htmlFor="cuisines">Cuisines</label>
                     <input id="cuisines" name="cuisines"  required/>
                 </div>
-                <div>
-                    <label for="founded">Founded Year</label>
-                    <input  id="founded" name="founded" />
-                </div>
-
                 <input type="submit" value="Add Place" />
                 </form>
 
