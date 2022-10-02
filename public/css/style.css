@@ -48,4 +48,14 @@ body {
     margin-left: 20px;
     background-color: white;
   }
+  #comments{
+    width: 100%;
+    display: flex;
+    margin: auto; 
+  }
+  #icomments{
+    width: 31.5%;
+    display: flex;
+    margin: auto;
+  }
   
