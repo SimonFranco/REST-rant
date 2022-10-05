@@ -56,10 +56,10 @@ function show (data) {
             <h4>
                Serving {data.place.cuisines} 
             </h4>
-            <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
+            <a href={`/places/${data.place.id}/edit`} className="btn btn-warning"> 
                 Edit
             </a>     
-            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+            <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}> 
                 <button type="submit" className="btn btn-danger">
                     Delete
                 </button>
@@ -78,11 +78,11 @@ function show (data) {
                 </div>
                 <div className='row'>
                     <label htmlFor='author'>Author</label>
-                    <input id='author' name='author'></input>
+                    <input id='author' name='author'/>
                     <label htmlFor='stars'>Star Rating</label>
-                    <input type='range' step='0.5' min='1' max='5' id='stars' name='stars'></input>
+                    <input type='range' step='0.5' min='1' max='5' id='stars' name='stars'/>
                     <label htmlFor='rant'>Rant?</label>
-                    <input type='checkbox' id='rant' name='rant'></input>
+                    <input type='checkbox' id='rant' name='rant'/>
                 </div>
                 <input type='submit' value='Add Comment'/>
 
