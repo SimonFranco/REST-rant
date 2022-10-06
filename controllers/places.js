@@ -84,6 +84,12 @@ router.get('/:id/edit', (req, res) => {
 
 router.post('/:id/comment', (req, res) => {
   console.log(req.body)
+  if (req.body.rant) {
+    req.body.rant = true
+  } 
+  else {
+    req.body.rant = false
+  }
   db.Place.findById(req.params.id)
   .then(place => {
       db.Comment.create(req.body)
@@ -106,7 +112,6 @@ router.post('/:id/comment', (req, res) => {
       res.render('error404')
   })
 })
-
 
 
 
